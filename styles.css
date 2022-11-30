@@ -1,0 +1,510 @@
+/* GENERAL STYLES */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+
+  /* Does NOT work on Safari */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: white;
+  background-color: #121212;
+  height: 100vh;
+
+  /* Only works if there is nothing absolutely positioned in relation to body */
+  /* overflow-x: hidden; */
+  /* overflow-y: hidden; */
+}
+
+svg {
+  transition: all 0.5s;
+}
+
+.song {
+  transition: all 0.2s;
+}
+
+svg:hover {
+  fill: #1ed760;
+  stroke: #1ed760;
+}
+
+/* GRID STYLES */
+.grid {
+  display: grid;
+  grid-template-columns: 20rem 1fr 35rem;
+  gap: 3rem;
+}
+
+.grid-middle {
+  grid-column: 2/3;
+  height: 200rem;
+  background-color: #181818;
+  /* overflow-y: scroll; */
+}
+
+.scrollable {
+  height: 100vh;
+}
+
+/* .wrapper {
+  overflow-y: scroll;
+} */
+
+/* STICKY STYLES */
+
+.sticky {
+  height: 100vh;
+  position: fixed;
+}
+
+.sticky-one {
+  height: 90vh;
+}
+
+.sticky-two {
+  height: 100vh;
+  width: 35rem;
+  right: 0rem;
+  padding-right: 3rem;
+}
+
+.sticky-three {
+  position: fixed;
+  bottom: 0;
+  height: 10vh;
+  width: 100vw;
+  background-color: #181818;
+}
+
+/* .sticky-four {
+  position: fixed;
+  height: 5vh;
+  top: 1rem;
+  background-color: linear;
+} */
+
+.sticky-header {
+  display: flex;
+  justify-content: space-between;
+  width: 60.1%;
+
+  position: fixed;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  top: 0rem;
+  background-color: rgba(66, 106, 81, 0.1);
+}
+
+/* NAVIGATION STYLES */
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+
+  /* padding-left: 1.9rem; */
+  position: fixed;
+  height: 100vh;
+  position: sticky;
+
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+nav svg {
+  height: 2.2rem;
+}
+
+.playlists {
+  height: 120rem;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+
+  font-size: 1.2rem;
+  padding-left: 1.9rem;
+}
+
+.playlists p {
+  margin-bottom: 0.4rem;
+  padding: 0.7rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.7rem;
+  border-radius: 50px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 50px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 100px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding-left: 1.9rem;
+}
+
+.elipsis {
+  margin-top: 0.6rem;
+  padding-left: 1.9rem;
+  height: 3rem;
+}
+
+nav .separation {
+  height: 0.1px;
+  width: 19rem;
+  border-bottom: none;
+  margin-left: 1.9rem;
+}
+
+.separation-two {
+  height: 0.1px;
+  width: 97%;
+  border-bottom: none;
+  margin-left: 3rem;
+}
+
+.current-song-img {
+  /* align-self: flex-end; */
+  /* width: 10%; */
+  justify-self: flex-end;
+  /* margin-top: 110%; */
+}
+
+nav span:hover {
+  color: #1ed760;
+}
+/* MIDDLE STYLES */
+.wrapper {
+  background-color: rgba(255, 255, 255, 0.09);
+  background-color: rgba(66, 106, 81, 0.7);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.6)),
+    url("img/header.png");
+  background-size: cover;
+  opacity: 100;
+}
+
+header {
+  width: 100%;
+  height: 20%;
+  /* background-image: url("img/header.png"); */
+  padding-bottom: 3rem;
+  opacity: 100;
+}
+
+.head {
+  opacity: 100;
+}
+
+.playlist-privacy {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+.playlist-description {
+  color: #888;
+  font-size: 1.2rem;
+}
+
+em {
+  padding-left: 1rem;
+  font-style: normal;
+}
+
+h1 {
+  font-size: 4.2rem;
+}
+
+.header-bottom {
+  display: flex;
+  gap: 1.4rem;
+  color: #aaa;
+  font-size: 1.2rem;
+}
+
+strong {
+  color: white;
+}
+
+.header-top {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.2rem;
+  padding-bottom: 7.2rem;
+}
+
+.header-topleft {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 30px;
+  padding: 0.3rem 0.5rem;
+  margin-right: 1rem;
+}
+
+.sv1 {
+  background-color: rgba(0, 0, 0, 0.001);
+  border-radius: 30px;
+  padding: 0.3rem 0.3rem;
+}
+
+.user-profile img {
+  border-radius: 50px;
+  height: 2.8rem;
+  width: 2.8srem;
+}
+
+/* HEADER MIDDLE */
+
+.header-middle {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 2rem;
+}
+
+.middle-midtop {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  padding-left: 2rem;
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  background-color: rgba(66, 106, 81, 0.7);
+  background-image: linear-gradient(to bottom, rgba(66, 106, 81, 0.2), #181818);
+}
+
+.play {
+  stroke: #121212;
+  fill: #121212;
+  background-color: #1ed760;
+  border-radius: 50px;
+  padding: 0.9rem 0.9rem;
+}
+
+.magnifying {
+  margin-left: 57%;
+}
+
+.middle-midbottom {
+  display: flex;
+  gap: 2.5rem;
+  padding-left: 2.3rem;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+/* SONGS SECTION */
+.songs {
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-left: 3rem;
+}
+
+.alb {
+  margin-left: 40%;
+}
+
+.middle-midbottom svg {
+  margin-left: 45%;
+}
+.song:hover {
+  background-color: #888;
+}
+
+.song-names {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.song span {
+  font-size: 1.4rem;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+  padding: 0.5rem 0.3rem;
+}
+
+.album {
+  margin-left: 20%;
+}
+
+.song svg {
+  margin-left: 30%;
+}
+
+.song-title {
+  font-weight: 700;
+}
+
+.artist-name {
+  font-weight: 300;
+}
+
+.song svg:hover {
+  fill: #1ed760;
+  stroke: #1ed760;
+}
+
+.playlists p:hover {
+  color: #1ed760;
+}
+
+.duration {
+  justify-self: flex-end;
+}
+/* FRIEND ACTIVITY SECTION STYLES */
+
+.friend-activity {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.friend-activity h2 {
+  margin-top: 2rem;
+  font-size: 2.2rem;
+}
+
+.top-part {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1.6rem;
+}
+
+.top-part svg {
+  margin-top: 2rem;
+}
+
+.friend {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 1.9rem;
+}
+
+.friend img {
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 500px;
+}
+
+.friend-details {
+  display: flex;
+  line-height: 1.7rem;
+  flex-direction: column;
+  margin-left: 1.2rem;
+  font-weight: 400;
+  font-size: 1.2rem;
+  letter-spacing: 2.5;
+}
+
+.left-part {
+  display: flex;
+}
+
+.name {
+  font-weight: 700;
+}
+
+.active {
+  align-self: flex-start;
+  justify-self: end;
+}
+
+/* FOOTER STYLES */
+
+.bottom {
+  display: flex;
+}
+
+.footers {
+  width: 80%;
+  height: 100%;
+  object-fit: cover;
+
+  justify-self: end;
+  align-self: flex-end;
+  margin-left: 20rem;
+}
+
+.song-playing {
+  display: flex;
+  font-size: 1.4rem;
+  column-gap: 4.5rem;
+  align-items: center;
+}
+
+.song-name {
+  padding-top: 2.3rem;
+  padding-left: 2rem;
+  padding-right: 6.4rem;
+  padding-bottom: 2.3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.band {
+  font-weight: 300;
+}
+
+.song-title-two {
+  font-weight: 600;
+}
+
+.bottom svg {
+  padding-top: 1rem;
+  height: 4rem;
+  padding-bottom: 1rem;
+}
