@@ -24,6 +24,7 @@ body {
   color: white;
   background-color: #121212;
   height: 100vh;
+  width: 100vw;
 
   /* Only works if there is nothing absolutely positioned in relation to body */
   /* overflow-x: hidden; */
@@ -46,14 +47,16 @@ svg:hover {
 /* GRID STYLES */
 .grid {
   display: grid;
-  grid-template-columns: 20rem 1fr 35rem;
-  gap: 3rem;
+  grid-template-columns: 23rem 1fr 35rem;
+  /* gap: 1rem; */
 }
 
 .grid-middle {
   grid-column: 2/3;
   height: 200rem;
   background-color: #181818;
+  /* padding-left: 3rem; */
+  /* padding-right: 2rem; */
   /* overflow-y: scroll; */
 }
 
@@ -79,8 +82,11 @@ svg:hover {
 .sticky-two {
   height: 100vh;
   width: 35rem;
+
   right: 0rem;
   padding-right: 3rem;
+  padding-left: 3rem;
+  background-color: #121212;
 }
 
 .sticky-three {
@@ -101,13 +107,20 @@ svg:hover {
 .sticky-header {
   display: flex;
   justify-content: space-between;
-  width: 60.1%;
-
-  position: fixed;
+  width: 100%;
+  position: sticky;
+  /* position: fixed;
+  display: block; */
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   top: 0rem;
   background-color: rgba(66, 106, 81, 0.1);
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.19)),
+    url("img/header.png"); */
+  /* background-image: url("img/header.png"); */
+  background-size: 100%;
+  background-position-y: 5%;
+  background-position-x: 5%;
 }
 
 /* NAVIGATION STYLES */
@@ -117,6 +130,8 @@ nav {
   flex-direction: column;
   align-items: flex-start;
   gap: 2rem;
+  /* background-color: red; */
+  /* padding-left: 3rem; */
 
   /* padding-left: 1.9rem; */
   position: fixed;
@@ -133,7 +148,7 @@ nav svg {
 
 .playlists {
   height: 120rem;
-  width: 100%;
+  width: 107%;
   overflow-x: hidden;
   overflow-y: scroll;
 
@@ -179,7 +194,8 @@ nav svg {
 .elipsis {
   margin-top: 0.6rem;
   padding-left: 1.9rem;
-  height: 3rem;
+  height: 20rem;
+  width: 4rem;
 }
 
 nav .separation {
@@ -191,9 +207,10 @@ nav .separation {
 
 .separation-two {
   height: 0.1px;
-  width: 97%;
+  width: 100%;
   border-bottom: none;
   margin-left: 3rem;
+  margin-top: 0.1rem;
 }
 
 .current-song-img {
@@ -201,6 +218,7 @@ nav .separation {
   /* width: 10%; */
   justify-self: flex-end;
   /* margin-top: 110%; */
+  width: 110%;
 }
 
 nav span:hover {
@@ -208,12 +226,22 @@ nav span:hover {
 }
 /* MIDDLE STYLES */
 .wrapper {
+  /* background-color: rgba(255, 255, 255, 0.09);
+  background-color: rgba(66, 106, 81, 0.7);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.6)),
+    url("img/header.png");
+  background-size: cover; */
+  background-position-y: 32.6%;
+  opacity: 100;
+  width: 100%;
+}
+
+.bg-wrapper {
   background-color: rgba(255, 255, 255, 0.09);
   background-color: rgba(66, 106, 81, 0.7);
   background-image: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.6)),
     url("img/header.png");
   background-size: cover;
-  opacity: 100;
 }
 
 header {
@@ -234,7 +262,7 @@ header {
 }
 
 .playlist-description {
-  color: #888;
+  color: #a9a9a7;
   font-size: 1.2rem;
 }
 
@@ -250,7 +278,7 @@ h1 {
 .header-bottom {
   display: flex;
   gap: 1.4rem;
-  color: #aaa;
+  color: #a9a9a7;
   font-size: 1.2rem;
 }
 
@@ -268,10 +296,10 @@ strong {
   padding-bottom: 7.2rem;
 }
 
-.header-topleft {
+/* .header-topleft {
   display: flex;
   gap: 1.5rem;
-}
+} */
 
 .user-profile {
   display: flex;
@@ -292,7 +320,7 @@ strong {
 .user-profile img {
   border-radius: 50px;
   height: 2.8rem;
-  width: 2.8srem;
+  width: 2.8rem;
 }
 
 /* HEADER MIDDLE */
@@ -304,37 +332,76 @@ strong {
   flex-direction: column;
   gap: 2.5rem;
   padding-left: 2rem;
+  padding-top: 3.2rem;
 }
 
 .middle-midtop {
   display: flex;
   gap: 3rem;
+  width: 100%;
   align-items: center;
+  justify-content: space-between;
   padding-left: 2rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
   padding-top: 1.5rem;
   background-color: rgba(66, 106, 81, 0.7);
   background-image: linear-gradient(to bottom, rgba(66, 106, 81, 0.2), #181818);
+}
+
+.flex-first {
+  display: flex;
+  column-gap: 2rem;
+  align-items: center;
+}
+
+.flex-last {
+  display: flex;
+  align-items: center;
+  column-gap: 3rem;
+  padding-right: 3.5rem;
 }
 
 .play {
   stroke: #121212;
   fill: #121212;
   background-color: #1ed760;
-  border-radius: 50px;
+  border-radius: 100000px;
   padding: 0.9rem 0.9rem;
+  height: 5.5rem;
+  width: 5.5rem;
 }
 
-.magnifying {
-  margin-left: 57%;
-}
+/* .magnifying {
+  margin-left: 50%;
+} */
+
+/* .flex-end {
+  justify-self: flex-end;
+  align-self: flex-end;
+} */
 
 .middle-midbottom {
   display: flex;
-  gap: 2.5rem;
-  padding-left: 2.3rem;
+  flex-direction: column;
+  /* gap: 2.5rem; */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   align-items: center;
   padding-bottom: 1rem;
+  justify-content: space-between;
+  margin-right: 3rem;
+
+  font-size: 1.3em;
+  color: #a9a9a7;
+}
+
+.midbot {
+  display: flex;
+  padding-left: 2.3rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.8rem;
+  width: 100%;
 }
 
 /* SONGS SECTION */
@@ -344,15 +411,16 @@ strong {
   flex-direction: column;
   gap: 1.5rem;
   margin-left: 3rem;
+  margin-right: 2.1rem;
 }
 
-.alb {
+/* .alb {
   margin-left: 40%;
-}
+} */
 
-.middle-midbottom svg {
+/* .middle-midbottom svg {
   margin-left: 45%;
-}
+} */
 .song:hover {
   background-color: #888;
 }
@@ -363,24 +431,51 @@ strong {
   gap: 0.5rem;
 }
 
+.song p {
+  font-size: 1.4rem;
+}
+
 .song span {
   font-size: 1.4rem;
+  width: 1.2rem;
 }
 
 .song {
   display: flex;
   align-items: center;
   gap: 3.5rem;
+  justify-content: space-between;
   padding: 0.5rem 0.3rem;
 }
 
+.first-two {
+  display: flex;
+  align-items: center;
+  gap: 3.5rem;
+}
+
+.last-three {
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+  padding-right: 4rem;
+}
+
 .album {
+  margin-right: 5rem;
+}
+
+.elipsis2 {
+  display: none;
+}
+
+/* .album {
   margin-left: 20%;
 }
 
 .song svg {
   margin-left: 30%;
-}
+} */
 
 .song-title {
   font-weight: 700;
@@ -408,6 +503,8 @@ strong {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  /* background-color: red; */
+  /* padding-left: rem; */
 }
 
 .friend-activity h2 {
@@ -415,11 +512,16 @@ strong {
   font-size: 2.2rem;
 }
 
+.options {
+  display: flex;
+  gap: 1.2rem;
+}
+
 .top-part {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 1.6rem;
+  padding-right: 0.2rem;
 }
 
 .top-part svg {
@@ -507,4 +609,14 @@ strong {
   padding-top: 1rem;
   height: 4rem;
   padding-bottom: 1rem;
+}
+
+@media (max-width: 75em) {
+  .sticky-two {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: 23rem 1fr;
+  }
 }
