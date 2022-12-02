@@ -133,6 +133,7 @@
             stroke-width="1.5"
             stroke="currentColor"
             class="w-6 h-6"
+            id="btn"
           >
             <path
               stroke-linecap="round"
@@ -141,7 +142,7 @@
             />
           </svg>
 
-          <span>Your Episodes</span>
+          <span class="btn-text">Your Episodes</span>
         </div>
         <hr class="separation first-sep" />
         <div class="playlists">
@@ -288,7 +289,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6"
+              class="hart w-6 h-6"
             >
               <path
                 stroke-linecap="round"
@@ -304,7 +305,7 @@
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6"
+              class="download w-6 h-6"
             >
               <path
                 stroke-linecap="round"
@@ -409,7 +410,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                class="hart-small w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -433,12 +434,34 @@
             d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
           />
         </div>
+      
           </div>
           <!-- END OF SINGLE SONG -->
           <!-- START OF SINGLE SONG -->
-          <div class="song">
+          <div class="song song-two">
             <div class="first-two">
-              <span>2</span>
+              <div class="number-play">
+              <span class="number-player">2</span>
+              <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              height="25"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="song-player w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+              />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="25" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="song-player song-player2 w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 5.25v13.5m-7.5-13.5v13.5" />
+            </svg>
+            
+            </div>
               <img src="img/song2.jfif" height="40" alt="song-cover" />
               <!-- FLEX for song name-->
               <div class="song-names">
@@ -456,7 +479,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                class="hart-small2 w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -503,7 +526,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                class="hart-small3 w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -550,7 +573,7 @@
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                class="hart-small4 w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -1228,7 +1251,24 @@
         </div>
         <div class="friend">
           <div class="left-part">
-            <img src="img/rick.jfif" height="40" alt="friend picture" />
+            <div class="friend-hover">
+            <img src="img/rick.jfif" class="friend-img" height="40" alt="friend picture" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              height="25"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="play-small w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+              />
+            </svg>
+          </div>
             <div class="friend-details">
               <span class="name">Friend #1</span>
               <span class="song-playing">Kaibutsu &#9900; YOASOBI</span>
@@ -1239,7 +1279,24 @@
         </div>
         <div class="friend">
           <div class="left-part">
-            <img src="img/elon.jpg" height="40" alt="friend picture" />
+            <div class="friend-hover">
+              <img src="img/elon.jpg" class="friend-img friend-img3" height="40" alt="friend picture" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                height="25"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="play-small play-small3 w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+                />
+              </svg>
+            </div>
             <div class="friend-details">
               <span class="name">Friend #2</span>
               <span class="song-playing">Romance &#9900; YOASOBI</span>
@@ -1250,7 +1307,24 @@
         </div>
         <div class="friend">
           <div class="left-part">
-            <img src="img/caloocan.jpg" height="40" alt="friend picture" />
+            <div class="friend-hover">
+              <img src="img/caloocan.jpg" class="friend-img friend-img2" height="40" alt="friend picture" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                height="25"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="play-small play-small2 w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"
+                />
+              </svg>
+            </div>
             <div class="friend-details">
               <span class="name">Friend #3</span>
               <span class="song-playing">Yoru ni Kakeru &#9900; YOASOBI</span>
@@ -1288,5 +1362,6 @@
         <img class="footers" src="footer.png" height="30" alt="user profiles" />
       </section>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

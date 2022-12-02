@@ -44,6 +44,28 @@ svg:hover {
   stroke: #1ed760;
 }
 
+.liked {
+  fill: #1ed760;
+  stroke: #1ed760;
+}
+
+.liked2 {
+  stroke: #1ed760;
+}
+
+.magnifying:hover {
+  fill: none;
+}
+
+.download:hover {
+  fill: none;
+}
+
+.btn-text:hover > #btn {
+  fill: #1ed760;
+  stroke: #1ed760;
+}
+
 /* GRID STYLES */
 .grid {
   display: grid;
@@ -422,7 +444,7 @@ strong {
   margin-left: 45%;
 } */
 .song:hover {
-  background-color: #888;
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .song-names {
@@ -438,6 +460,22 @@ strong {
 .song span {
   font-size: 1.4rem;
   width: 1.2rem;
+}
+
+.song-title {
+  position: relative;
+}
+
+.song-player {
+  position: absolute;
+  left: 17.1%;
+  top: 64.2%;
+  display: none;
+  transition: none;
+}
+
+.song-player2 {
+  left: 16.7%;
 }
 
 .song {
@@ -463,6 +501,10 @@ strong {
 
 .album {
   margin-right: 5rem;
+}
+
+.song p:hover {
+  text-decoration: underline;
 }
 
 .elipsis2 {
@@ -510,6 +552,32 @@ strong {
 .friend-activity h2 {
   margin-top: 2rem;
   font-size: 2.2rem;
+}
+
+.friend-hover {
+  position: relative;
+}
+
+.friend-img {
+  position: relative;
+}
+
+.play-small {
+  position: absolute;
+  left: 29%;
+  bottom: 31.8%;
+  /* background-color: #181818;
+  border-radius: 100px; */
+  display: none;
+}
+
+.play-small:hover {
+  fill: white;
+  stroke: white;
+}
+
+.friend span:hover {
+  text-decoration: underline;
 }
 
 .options {
@@ -618,5 +686,23 @@ strong {
 
   .grid {
     grid-template-columns: 23rem 1fr;
+  }
+}
+
+@media (max-width: 48em) {
+  .sticky-two {
+    display: none;
+  }
+
+  .sticky-one {
+    display: none;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .grid-middle {
+    width: 100vw;
   }
 }
